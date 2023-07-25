@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+.App{
+    background-color: #E5EAF0;
+    width: 100%;
+    min-height: 135vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+.Phone{
+    width: 380px;
+    min-height: 80%;
+    border: 5px solid #D8DEEA;
+    background-color: #F6F7FB;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.04);
+    position: relative;
+}
+.shadow{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100px;
+    background-color: black;
+    opacity: 0.1;
+    width: 100%;
+    height: calc(100% - 100px);
+    border-radius: 0 0 25px 25px;
+    z-index: 100;
+
+}
+.side-box{
+    width: 200px;
+    background-color: white;
+    z-index: 1000;
+    position: absolute;
+    opacity: 1;
+    border-radius: 10px;
+    right: 18px;
+    top: 115px;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: column;
+    animation-name: slide-in;
+    animation-duration: .3s;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.05);
+    /* justify-content: space-between; */
+} 
+@keyframes slide-in {
+    from {
+        top: 75px;
+        opacity: 0;
+    }
+    to {
+        top: 115px;
+        opacity: 1;
+    }
+    
+}
+
+.side-box .list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #B3B3B3;
+    padding: 8px 0;
+    font-size: 16px;
+}
+.side-box .list i{
+    font-size: 21px;
+}
+.side-box .list:last-child{
+    border-bottom: none;
+    color: #F2205D;
+}
+.inside{
+    width: 100%;
+    height: 100%;
+    background-color: #F2F6F9;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.Header{
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 25px 25px 0 0;
+    position: relative;
+}
+.notch-row{
+    height: 30px;
+    width: 100%;
+    background: linear-gradient( #F6F7FB 20%, white 20%);
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #49596A;
+}
+.time{
+    flex-basis: 22.5%;
+    font-weight: bold;
+    height: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 25px 6px 0 0 ;
+    background-color: white;
+    font-size: 14.5px;
+    position: relative;
+}
+.time span{
+    position: absolute;
+    top: 13px;
+}
+.top-icons{
+    flex-basis: 22.5%;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    background-color: white;
+
+    height: 30px;
+    border-radius: 6px 25px  0 0 ;
+}
+.top-icons i{
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.notch{
+    width: 55%;
+    height: 30px;
+    background-color: #F6F7FB;
+    border-radius: 0 0 22px 22px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.speaker{
+    width: 30%;
+    background-color: #E9ECF3;
+    height: 7px;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+    margin-top: -4px;
+}
+.camera{
+    width: 10px;
+    height: 10px;
+    background-color: #E9ECF3;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+    margin-top: -4px;
+}
+.header-content{
+    height: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.header-content i{
+    font-size: 31px;
+    color: #ACB7C5;
+    font-weight: 200;
+    border-radius: 50%;
+    padding: 3px; 
+    transition: .3s;  
+}
+.header-content i:hover{
+    color: #49596A;  
+}
+
+#bars{
+    z-index: 1000;  
+}
+
+.header-content p{
+    font-size: 24px;
+    font-weight: 500;
+    color: #49596A;
+}
+.Cards{
+    width: 90%;
+    height: 185px;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 15px;
+    /* box-shadow: 0 0 10px #E8EBF0; */
+    box-shadow: 0 0 10px 10px #E8EBF0;
+    position: relative;
+}
+.bitcoin{
+    display: flex;
+    justify-content: space-between;
+}
+.bitcoin .left{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.bitcoin .right{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #AAB1BB;
+}
+.bitcoin i{
+    background: linear-gradient(#FEB433, #FE9920);
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+
+}
+.btc-value{
+    margin-top: 10px;
+    color: #49596A;
+    font-size: 26px;
+    font-weight: 500;
+}
+.usd{
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+    color: #A7B2BF;
+}
+.usd .left{
+    font-size: 15px;
+}
+.usd .right{
+    background-color: #EE225D;
+    border: 1px solid #EE225D;
+    color: white;
+    padding: 1px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+}
+.usd .right:hover{
+    transform: scale(1.05);
+}
+.arrow{
+    font-size: 60px;
+    transform: rotateX(60deg);
+    font-weight: 500;
+    color: #ACB8C5;
+    width: 100%;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.BuySellBtn{
+    width: 100%;
+    height: 50px;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .3s;
+}
+.BuySellBtn button{
+    width: 40%;
+    border: none;
+    padding: 4px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    transition: .3s;
+}
+.BuySellBtn button:hover{
+    transform: scale(1.03);
+}
+.DurationList{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    padding: 0 7%;
+    
+}
+.Duration{
+    padding: 3px 9px;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: .3s;
+    cursor: pointer;
+}
+.Duration:hover{
+    color: white;
+    background-color: #AEB8C4;
+}
+.buy-sell{
+    display: flex;
+    width: 100%;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+.buy-sell-card{
+    width: 46%;
+    background-color: white;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 20px;
+    text-align: center;
+    color: #4E5760;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+}
+.buy-sell-card span{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+}
+.footer{
+    width: 100%;
+    height: 73px;
+    background-color: #ffffff;
+    border-radius:  0 0 25px 25px;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 15px;
+}
+.footer i{
+    font-size: 24px;
+    color: #AFB9C5;
+    transition: .3s;
+}
+.footer i:hover{
+    color: #4A5A6A;
+}
+
+
+footer i.active{
+    color: #4A5A6A;
+}
+.bar{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #AEB7C6;
+    width: 50%;
+    height: 4px;
+    border-radius: 5px;
+}
+
+.chart .recharts-surface{
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.price-info{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 7%;
+    top: 20px;
+    color: #918E9F;
+}
+#scale{
+    top: 150px;
+    z-index: 1001;
+    color: #49596A;
+    font-size: 15px;
+}
+.lower, .higher, .info{
+    position: relative;
+    margin-left: 10px;
+}
+.lower::before, .higher::before, .info::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -13px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    
+    border-radius: 50%;
+}
+.lower::before{
+    background-color: #E62749;
+}
+.higher::before{
+    background-color: #22C56C;
+}
+.info::before{
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(#FEA12A 30%,#FFECBA);
+}
+a{
+    text-decoration: none;
+    color: #AEB8C4;
+}
+
+@media only screen and (max-width: 414px) {
+    .App{
+        width: 100%;
+        min-height: 125vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .Phone{
+        width: 100%;
+        min-height: 80%;
+        padding: 0;
+        position: relative;
+        border-radius: 0;
+        border: none;
+    }
+    .inside{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .shadow{
+        top: 70px;
+        background-color: black;
+        opacity: 0.1;
+        width: 100%;
+        height: calc(100% - 70px);
+        border-radius: 0;
+    
+    }
+    .Header{
+        width: 100%;
+        height: 70px;
+        background-color: #ffffff;
+        position: relative;
+        border-radius: 0;
+    }
+    .notch-row{
+        display: none;
+    }
+    .header-content{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    .Cards{
+        height: 195px;
+    }
+    .footer{
+        height: 70px;
+        border-radius:  0;
+        align-items: center;
+        padding-top: 0;
+    }
+    .bar{
+        display: none;
+    }
+}
